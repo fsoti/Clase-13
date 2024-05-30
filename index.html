@@ -13,21 +13,25 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&family=Poetsen+One&display=swap" rel="stylesheet" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 
         <style>
             :root {
-                --bs-font-sans-serif: "Poetsen One", sans-serif;
+                --bs-font-sans-serif: "Open sans", sans-serif;
                 --bs-light-rgb: 204, 204, 255;
             }
 
-            .poetsen-one-regular {
-                font-family: "Poetsen One", sans-serif;
-                font-weight: 400;
+            .open-sans-<uniquifier> {
+                font-family: "Open Sans", sans-serif;
+                font-optical-sizing: auto;
+                font-weight: <weight>;
                 font-style: normal;
-            }
+                font-variation-settings:
+                    "wdth" 100;
+                }
+
 
             .ct-series-a .ct-bar,
             .ct-series-a .ct-line,
@@ -161,8 +165,8 @@
             <path d="M4.98 4a.5.5 0 0 0-.39.188L1.54 8H6a.5.5 0 0 1 .5.5 1.5 1.5 0 1 0 3 0A.5.5 0 0 1 10 8h4.46l-3.05-3.812A.5.5 0 0 0 11.02 4zm-1.17-.437A1.5 1.5 0 0 1 4.98 3h6.04a1.5 1.5 0 0 1 1.17.563l3.7 4.625a.5.5 0 0 1 .106.374l-.39 3.124A1.5 1.5 0 0 1 14.117 13H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .106-.374z"/>
         <symbol id="promedio" viewBox="0 0 16 16" class="iconos">
             <path d="M8 15a.5.5 0 0 1-.5-.5v-13a.5.5 0 0 1 1 0v13a.5.5 0 0 1-.5.5M.146 8.354a.5.5 0 0 1 0-.708l2-2a.5.5 0 1 1 .708.708L1.707 7.5H5.5a.5.5 0 0 1 0 1H1.707l1.147 1.146a.5.5 0 0 1-.708.708zM10 8a.5.5 0 0 1 .5-.5h3.793l-1.147-1.146a.5.5 0 0 1 .708-.708l2 2a.5.5 0 0 1 0 .708l-2 2a.5.5 0 0 1-.708-.708L14.293 8.5H10.5A.5.5 0 0 1 10 8"/>
-        <symbol id="menor" viewBox="0 0 16 16" class="iconos">
-            <path fill-rule="evenodd" d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1"/>
+        <symbol id="mayor" viewBox="0 0 16 16" class="iconos">
+            <path d="M2 16a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2zm6.5-4.5V5.707l2.146 2.147a.5.5 0 0 0 .708-.708l-3-3a.5.5 0 0 0-.708 0l-3 3a.5.5 0 1 0 .708.708L7.5 5.707V11.5a.5.5 0 0 0 1 0"/>
         </svg>
 
         <header class="bg-light fixed-top">
@@ -178,10 +182,12 @@
         <figure class="mx-2 mt-5">
             <img id="cambia" src="https://s.studiobinder.com/wp-content/uploads/2020/07/Highest-Grossing-Movies-of-All-Time-What-Makes-a-Blockbuster-Featured.jpg" class="pt-3 w-100" />
         </figure>
-        <main class="mt-5">
-            <div class="container">
+        <main class="">
                 <div class="row align-items-center">
-                    <div class="col-lg-8 pe-5">
+                    <div class="col-8 pe-5 ps-5">
+                        <p>
+                            Se utilizó la herramienta proporcionada por RawGraphs para explorar los diferentes tipos de gráficos y datos. En este caso, se emplearon los datos entregados por la misma plataforma para realizar un ejercicio de ejemplo.<strong> Hightest grossing movies in history. </strong> Además, se siguió la recomendación sobre el tipo de gráfico más adecuado en relación con el conjunto de datos seleccionado.
+                        </p>
                         <h2><svg width="24" height="24"><use href="#highest"/></svg> Highest grossing movies in history</h2>
                         <object data="viz.svg" type="image/svg+xml" class="w-100">
                             <img src="alt.png" />
@@ -190,6 +196,8 @@
                     <div class="col-lg-4">
                         <div class="row ps-5">
                             <div class="col-12 col-sm-6 col-lg-12 py-3">
+                                <div class="pb-5"></div>
+                                <p class="mt-5 pt-5">Con el mismo conjunto de datos, se sacaron el promedio de los géneros, tanto en el ROI como en el BOX OFFICE.</p>
                                 <h2 class="text-center fs-5"><svg width="24" height="24"><use href="#roi"/></svg> ROI</h2>
                                 <div class="ct-chart1 ct-minor-second"></div>
                             </div>
@@ -203,16 +211,22 @@
                     <div class="col-12">
                         <h2 class="text-center"><svg width="24" height="24"><use href="#promedio"/></svg> COMPARACIÓN PROMEDIOS</h2>
                         <div class="ct-chart3 ct-major-twelfth"></div>
+                        <div class="col-12 mt-5 text-center">
+                        <p>A continuación se analizan seis películas de la categoría <strong>ACCIÓN</strong>, que tuvieron la mayor ROI</p>
                     </div>
+                    <div class="col-12 mt-5">
+                        <h2 class="text-center"><svg width="24" height="24"><use href="#mayor"/></svg> PELÍCULAS ANIMADAS CON MAYOR RETORNO DE INVERSIÓN (ROI)</h2>
+                        <div class="ct-chart4 ct-major-twelfth"></div>
+                    </div>
+                    </div>            
                 </div>
-            </div>
         </main>
         <footer class="bg-light">
             <hr />
             <div class="container py-1">
                 <div class="row">
-                    <div class="col-10 mx-auto text-center font-monospace fst-italic fw-lighter">
-                        <p>Clase 12 | 22 de Mayo 2024</p>
+                    <div class="col-10 mx-auto text-center">
+                        <p class="my-0 d-flex justify-content-between align-items-center mb-3"><span>Clase 13</span> <span>Narrativas-gráficos</span></p>
                     </div>
                 </div>
             </div>
@@ -270,6 +284,13 @@
                     },
                 }
             );
+            new Chartist.Bar('.ct-chart4', {
+                  labels: ["Star Wars: Episode IV - A New Hope", "Jurassic Park", "Star Wars: Episode V - The Empire Strikes Back", "Thunderball", "Goldfinger", "Star Wars: Episode VI - Return of the Jedi"],
+                  series: [70.5, 16.4, 23.8, 14.1, 35.7, 14.7]
+                }, {
+                  distributeSeries: true
+                });
+
         </script>
         <script>
             /*
